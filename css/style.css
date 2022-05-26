@@ -1,0 +1,253 @@
+@charset "UTF-8";
+
+/* Kanit - H1 - H3*/
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap');
+
+/* Rajdhani */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600&display=swap');
+
+:root
+{
+    --azul1: #48A0E9;
+    --azul2: #2F76B2;
+    --azul3: #103F66;
+    --vermelho: #DB162F;
+    --verde: #00A896;
+    --cinza: #0d3241;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{ background-color: #f6f5f5;}
+
+nav {
+    display: flex; /* Logo e lista inline*/
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Rajdhani', sans-serif;
+    background: black;
+    height: 8vh; /* vh = Viewport - unidade responsiva*/
+}
+
+nav > a{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+li > a{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.logo{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.sublogo{ /* FRONT-END DEVELOPER */
+    font-size: 18px;
+    text-transform: uppercase;
+    color: rgb(252, 193, 41);
+}
+
+.nav-list{
+    list-style: none;
+    display: flex; /* colocar itens lado a lado */
+}
+
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 30px;
+    padding: 20px;
+}
+
+.mobile-menu {
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: white;
+    margin: 8px;
+}
+
+h1{ font-family: 'Kanit'; text-transform: uppercase; font-weight: bolder;}
+h2{ font-family: 'Kanit'; text-transform: uppercase; font-weight: bolder;}
+h3{ font-family: 'Kanit'; text-transform: uppercase; font-weight: bolder;}
+p { font-family: 'Rajdhani'; text-transform: uppercase;}
+
+header{ display: flex; height: 340px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.274);}
+#title{ text-align: left; padding: 10%; padding-left: 10%; width: 42%;}
+#title h3{ font-size: 0.8em; border: 0px; padding: 0px; margin-bottom: 20px;}
+#foto { background-color: #FCB823; width: 58%;}
+
+header button { 
+    padding: 15px; 
+    border-radius: 10px; 
+    font-family: 'Rajdhani'; 
+    font-weight: bolder; 
+    color:white; 
+    background-color: var(--verde); 
+}
+
+header button:hover{
+    cursor: pointer;
+    background-color: var(--cinza);
+}
+
+#foto img {
+    margin: auto;
+    position: absolute;
+    right: 0%;
+    height: 340px;
+    width: 400px;
+    bottom: auto;
+    z-index: 0;
+    border: 0px;
+    padding: 0px;
+}
+
+#media ul{
+    visibility: hidden;
+}
+
+
+@media (min-width:1200px)
+{
+
+    header a{
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+    }
+
+    header a:hover{
+        cursor: pointer;
+    }
+
+
+    /* Aparecer as redes sociais*/
+    #media ul{
+        position: absolute;
+        visibility: visible;
+        font-family: 'Kanit';
+        text-transform: uppercase; 
+        font-weight: bolder;
+        width: 190px;
+        margin-left: 60px;
+        top: 250px;
+    }
+
+    li img{
+        
+        height: auto;
+        width: auto;
+    }
+}
+
+@media (max-width: 990px){
+    body{
+        overflow-x: hidden;
+    }
+
+    .logo{
+        font-size: 18px;
+    }
+    .sublogo{
+        font-size: 10px;
+    }
+
+    .nav-list{
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw; /* view */
+        height: 92vh;
+        background: black;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    
+    .nav-list.active{
+        transform: translateX(0);
+        z-index: 1;
+    }
+    
+    @keyframes navLinkFade{
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+}
+
+@media (min-width:431px) and (max-width: 990px){
+    #foto img {
+        margin: auto;
+       position: absolute;
+        right: -5%;
+        height: 340px;
+        width: 400px;
+        bottom: auto;
+        z-index: 0;
+        border: 0px;
+        padding: 0px;
+        /*position:fixed*/
+    }
+}
+
+/* Iphone 6, 7, 8 normal */
+@media (max-width: 400px){
+    #foto img{
+        margin: auto;
+        position: absolute;
+        right: 0%;
+        height: 219px;
+        width: 259px;
+        bottom: 8.3vh;
+        z-index: 0;
+    }
+
+    #title {width: 15%;}
+    #title h3{ font-size: 0.6em;}
+}
+
+/* Iphone 6, 7, 8 Plus */
+@media (min-width:410px) and (max-width: 430px){
+    #foto img{
+        margin: auto;
+        position: absolute;
+        right: 0%;
+        height: 219px;
+        width: 259px;
+        bottom: 45.8vh;
+        z-index: 0;
+    }
+
+    #title {width: 15%;}
+    #title h3{ font-size: 0.6em;}
+}
