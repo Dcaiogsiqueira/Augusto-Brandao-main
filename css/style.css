@@ -240,7 +240,7 @@ header button:hover{
 @media (min-width:410px) and (max-width: 430px){
     #foto img{
         margin: auto;
-        position: static;
+        position: absolute;
         right: 0%;
         height: 219px;
         width: 259px;
