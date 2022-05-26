@@ -228,7 +228,7 @@ header button:hover{
         right: 0%;
         height: 219px;
         width: 259px;
-        bottom: auto;
+        bottom: 24vh;
         z-index: 0;
     }
 
