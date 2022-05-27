@@ -209,10 +209,11 @@ header button:hover{
     #foto img {
         margin: auto;
        position: absolute;
-        right: -5%;
+        
         height: 340px;
         width: 400px;
-        bottom: 5vh;
+        left: 0%;
+        top: 0%
         z-index: 0;
         border: 0px;
         padding: 0px;
@@ -225,10 +226,11 @@ header button:hover{
     #foto img{
         margin: auto;
         position: absolute;
-        right: 0%;
+        
         height: 219px;
         width: 259px;
-        bottom: 5vh;
+        left: 0%;
+        top: 0%
         z-index: 0;
     }
 
@@ -241,10 +243,11 @@ header button:hover{
     #foto img{
         margin: auto;
         position: absolute;
-        right: 0%;
+        /*right: 0%;*/
         height: 219px;
         width: 259px;
-        bottom: auto;
+        left: 0%;
+        top: 0%
         z-index: 0;
     }
 
