@@ -212,8 +212,8 @@ header button:hover{
         
         height: 340px;
         width: 400px;
-        left: 100%;
-        top: 100%
+        left: 50%;
+        top: 50%
         z-index: 0;
         border: 0px;
         padding: 0px;
@@ -229,8 +229,8 @@ header button:hover{
         
         height: 219px;
         width: 259px;
-        left: 100%;
-        top: 100%
+        left: 50%;
+        top: 50%
         z-index: 0;
     }
 
@@ -246,8 +246,8 @@ header button:hover{
         /*right: 0%;*/
         height: 219px;
         width: 259px;
-        left: 100%;
-        top: 100%
+        left: 50%;
+        top: 50%
         z-index: 0;
     }
 
